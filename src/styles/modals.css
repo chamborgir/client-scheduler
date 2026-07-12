@@ -155,15 +155,28 @@
 .inspection-view p { margin: 0; }
 
 .notes-display-box {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  padding: 10px;
-  border-radius: 6px;
-  margin-top: 4px;
+    /* 1. Visual Styling */
+    background-color: #f9f9f9; /* Change to your preferred background color */
+    border: 1px solid #d1d1d1; /* Ensures the border is visible */
+    border-radius: 6px;        /* Adds rounded corners */
+    
+    /* 2. Sizing and Layout */
+    width: 100%;
+    box-sizing: border-box;    /* Ensures padding stays inside the border */
+    padding: 12px;
+    margin-top: 8px;           /* Adds space above the box */
+    
+    /* 3. Text Wrapping (The fix for your previous issue) */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: pre-wrap;
 }
 
-.notes-content { margin: 0; white-space: pre-wrap; }
-
+.notes-content {
+    /* Ensure the text inside doesn't behave like a fixed-width block */
+    display: block;
+    margin: 0;
+}
 
 /* Ensure Sidebar Links have unified block elements */
 .sidebar-link-btn svg {
