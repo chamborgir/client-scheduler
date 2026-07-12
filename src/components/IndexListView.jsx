@@ -40,7 +40,7 @@ export default function IndexListView({
                                 <th className="table-header-cell">Name</th>
                                 <th className="table-header-cell">Date</th>
                                 <th className="table-header-cell">Time</th>
-                                <th className="table-header-cell">Scope</th>
+                                <th className="table-header-cell">Agenda</th>
                                 <th className="table-header-cell">Status</th>
                             </tr>
                         </thead>

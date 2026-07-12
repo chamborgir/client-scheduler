@@ -31,7 +31,7 @@ export default function ArchivedScheduleView({
                                 </th>
                                 <th className="table-header-cell">Time Slot</th>
                                 <th className="table-header-cell">
-                                    Closed Scope
+                                    Closed Agenda
                                 </th>
                                 <th className="table-header-cell">
                                     Status Map

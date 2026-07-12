@@ -748,7 +748,7 @@ export default function App() {
                                     </div>
                                     <div className="inspection-group">
                                         <span className="inspection-label">
-                                            Service Scope
+                                            Agenda
                                         </span>
                                         <div className="inspection-data">
                                             {activeClient.service}
@@ -756,12 +756,12 @@ export default function App() {
                                     </div>
                                     <div className="inspection-group">
                                         <span className="inspection-label">
-                                            Internal Documentation Notes
+                                            Notes
                                         </span>
                                         <div className="notes-display-box">
                                             <p className="notes-content">
                                                 {activeClient.notes ||
-                                                    "No extra contextual notations documented."}
+                                                    "No extra notes given."}
                                             </p>
                                         </div>
                                     </div>
