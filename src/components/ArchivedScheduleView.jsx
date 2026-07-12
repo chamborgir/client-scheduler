@@ -12,13 +12,13 @@ export default function ArchivedScheduleView({
         <section className="panel-card full-width">
             <div className="index-table-header">
                 <span className="panel-title">
-                    🗄️ Historical Archive Records ({archivedItems.length})
+                    Schedule History Records ({archivedItems.length})
                 </span>
             </div>
 
             {archivedItems.length === 0 ? (
                 <div className="table-empty-placeholder">
-                    No archive historical logs found.
+                    No archived schedule logs found.
                 </div>
             ) : (
                 <div className="table-wrapper">

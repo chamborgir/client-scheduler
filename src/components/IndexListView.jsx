@@ -15,7 +15,7 @@ export default function IndexListView({
         <section className="panel-card full-width">
             <div className="index-table-header">
                 <span className="panel-title">
-                    Active Index Registry ({activeItems.length})
+                    Active Schedule List ({activeItems.length})
                 </span>
                 <select
                     value={sortCriteria}
@@ -30,7 +30,7 @@ export default function IndexListView({
 
             {activeItems.length === 0 ? (
                 <div className="table-empty-placeholder">
-                    No pending active items logged.
+                    No pending active schedule logged.
                 </div>
             ) : (
                 <div className="table-wrapper">

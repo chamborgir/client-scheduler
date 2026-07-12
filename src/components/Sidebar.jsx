@@ -75,7 +75,7 @@ export default function Sidebar({
                                 <line x1="3" y1="12" x2="3.01" y2="12"></line>
                                 <line x1="3" y1="18" x2="3.01" y2="18"></line>
                             </svg>
-                            Full Registry Index
+                            Schedule List View
                         </button>
                         <button
                             onClick={() => setView("archived")}
@@ -101,7 +101,7 @@ export default function Sidebar({
                                 ></rect>
                                 <line x1="10" y1="12" x2="14" y2="12"></line>
                             </svg>
-                            Archived Schedule
+                            Archived Schedules
                         </button>
                         <hr className="panel-divider" />
                         <button
@@ -122,7 +122,7 @@ export default function Sidebar({
                                 <polyline points="1 20 1 14 7 14"></polyline>
                                 <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
                             </svg>
-                            Sync Schedules
+                            Sync Schedules Data
                         </button>
                         <button
                             onClick={() => setIsBackupModalOpen(true)}

@@ -120,9 +120,15 @@ export default function App() {
 
     const handleGoogleSignIn = async () => {
         setAuthError("");
+        const isProd = window.location.hostname !== "localhost";
         const { error } = await supabase.auth.signInWithOAuth({
             provider: "google",
-            options: { redirectTo: window.location.origin },
+            options: {
+                // This forces the redirect back to the correct host
+                redirectTo: isProd
+                    ? "https://client-scheduler-orcin.vercel.app"
+                    : "http://localhost:3000",
+            },
         });
         if (error) setAuthError(error.message);
     };
