@@ -14,9 +14,3 @@ The Client Scheduler is a productivity tool built to help users manage clients t
   - **Backend/Database:** Supabase (Auth, Database).
   - **Deployment:** Vercel.
 
-## Getting Started
-
-### Prerequisites
-- Node.js (v18+)
-- A Supabase project account
-- Vercel account for deployment
