@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FcGoogle } from "react-icons/fc"; // Import the Google icon
 export default function AuthView({
     authError,
     handleGoogleSignIn,
@@ -21,6 +21,9 @@ export default function AuthView({
                 )}
 
                 <button onClick={handleGoogleSignIn} className="google-btn">
+                    <FcGoogle
+                        style={{ marginRight: "10px", fontSize: "1.2rem" }}
+                    />
                     Continue with Google
                 </button>
 
