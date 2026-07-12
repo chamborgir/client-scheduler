@@ -1,6 +1,10 @@
 import { createClient } from "@supabase/supabase-js";
 import Dexie from "dexie";
-
+console.log(
+    "Checking Env Variables:",
+    import.meta.env.VITE_SUPABASE_URL,
+    import.meta.env.VITE_SUPABASE_ANON_KEY,
+);
 // 1. Initialize Cloud Connection
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
