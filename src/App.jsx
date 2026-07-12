@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 import HomepageView from "./components/HomepageView";
 import IndexListView from "./components/IndexListView";
 import ArchivedScheduleView from "./components/ArchivedScheduleView";
+import AuthView from "./components/AuthView"; // Import your new component
 
 export default function App() {
     // Infrastructure View Control State Engine
@@ -329,59 +330,17 @@ export default function App() {
 
     if (!session) {
         return (
-            <div className="login-wrapper">
-                <div className="auth-card">
-                    <h2>Workspace Panel</h2>
-                    <p className="auth-subtitle">
-                        Authentication Entry Required
-                    </p>
-                    {authError && (
-                        <div className="auth-error-block">{authError}</div>
-                    )}
-                    <button onClick={handleGoogleSignIn} className="google-btn">
-                        Continue with Google
-                    </button>
-                    <div className="divider-zone">
-                        <hr />
-                        <span>OR</span>
-                        <hr />
-                    </div>
-                    <form onSubmit={handleEmailAuth} className="auth-form">
-                        <input
-                            type="email"
-                            placeholder="Email"
-                            className="text-input"
-                            value={emailInput}
-                            onChange={(e) => setEmailInput(e.target.value)}
-                            required
-                        />
-                        <input
-                            type="password"
-                            placeholder="Password"
-                            className="text-input"
-                            value={passwordInput}
-                            onChange={(e) => setPasswordInput(e.target.value)}
-                            required
-                        />
-                        <button type="submit" className="primary-btn">
-                            {authMode === "login" ? "Sign In" : "Register"}
-                        </button>
-                    </form>
-                    <p className="auth-toggle-text">
-                        <span
-                            onClick={() =>
-                                setAuthMode(
-                                    authMode === "login" ? "signup" : "login",
-                                )
-                            }
-                        >
-                            {authMode === "login"
-                                ? "Create an account"
-                                : "Login"}
-                        </span>
-                    </p>
-                </div>
-            </div>
+            <AuthView
+                authError={authError}
+                handleGoogleSignIn={handleGoogleSignIn}
+                authMode={authMode}
+                setAuthMode={setAuthMode}
+                handleEmailAuth={handleEmailAuth}
+                emailInput={emailInput}
+                setEmailInput={setEmailInput}
+                passwordInput={passwordInput}
+                setPasswordInput={setPasswordInput}
+            />
         );
     }
 
