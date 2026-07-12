@@ -739,7 +739,7 @@ export default function App() {
                                     </div>
                                     <div className="inspection-group">
                                         <span className="inspection-label">
-                                            Allocated Schedule
+                                            Schedule
                                         </span>
                                         <div className="inspection-data">
                                             {activeClient.appointment_date} at{" "}
