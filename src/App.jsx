@@ -788,7 +788,7 @@ export default function App() {
                                             }
                                             className="secondary-btn"
                                         >
-                                            Dismiss
+                                            Close
                                         </button>
                                     </div>
                                 </div>
