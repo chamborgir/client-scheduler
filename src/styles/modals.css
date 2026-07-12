@@ -1,0 +1,266 @@
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px; /* Safe padding barrier layer */
+  box-sizing: border-box;
+}
+
+.modal-body-container {
+  background: var(--bg-card);
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid var(--border-default);
+  width: 100%;
+  max-width: 420px;
+  max-height: 90vh; /* Prevents long modal sheets from clipping off screen */
+  overflow-y: auto; /* Injects vertical container scrolling safely if notes or options exceed viewport heights */
+  box-sizing: border-box;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-heading {
+  margin: 0 0 16px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.modal-field-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #404040;
+  margin-bottom: 4px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-flex-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.time-picker-row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.modal-action-row {
+  display: flex;
+  gap: 8px;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0;
+}
+
+.checkbox-row input { cursor: pointer; }
+.checkbox-row label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+/* Form Fields */
+.text-input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #d4d4d4;
+  box-sizing: border-box;
+  font-size: 0.96rem;
+  outline: none;
+  background: var(--bg-card);
+  color: var(--text-main);
+}
+
+.textarea-input {
+  font-family: inherit;
+  resize: vertical;
+}
+
+/* System Action Buttons */
+.primary-btn {
+  background: var(--primary-accent);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background: var(--bg-card);
+  border: 1px solid #d4d4d4;
+  color: #404040;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.danger-btn {
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.backup-upload-zone {
+  position: relative;
+  border: 1px dashed #cbd5e1;
+  border-radius: 6px;
+  padding: 16px;
+  text-align: center;
+  background: #f8fafc;
+}
+
+.file-input-field {
+  font-size: 0.75rem;
+  color: #475569;
+  width: 100%;
+}
+
+.inspection-view {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: #404040;
+}
+
+.inspection-view p { margin: 0; }
+
+.notes-display-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+.notes-content { margin: 0; white-space: pre-wrap; }
+
+
+/* Ensure Sidebar Links have unified block elements */
+.sidebar-link-btn svg {
+  flex-shrink: 0;
+}
+
+/* Redesigned Structured Inspection Form Layout Overlay Mode */
+.inspection-view {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.inspection-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.inspection-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+}
+
+.inspection-data {
+  font-size: 0.96rem;
+  font-weight: 500;
+  color: var(--text-main);
+  background: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-default);
+}
+
+/* Explicit fallback states for core framework buttons styling rules */
+.primary-btn, .secondary-btn, .danger-btn, .action-add-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: background 0.1s, border-color 0.1s;
+}
+
+.primary-btn {
+  background: var(--primary-accent);
+  color: #ffffff;
+  border: 1px solid var(--primary-accent);
+}
+.primary-btn:hover {
+  background: #262626;
+}
+
+.secondary-btn {
+  background: #ffffff;
+  border: 1px solid #d4d4d4;
+  color: #404040;
+}
+.secondary-btn:hover {
+  background: #f5f5f5;
+  border-color: #a3a3a3;
+}
+
+.danger-btn {
+  background: #dc2626;
+  color: #ffffff;
+  border: 1px solid #dc2626;
+}
+.danger-btn:hover {
+  background: #b91c1c;
+}
+
+.action-add-btn {
+  padding: 6px 12px;
+  font-size: 0.75rem;
+}
+
+
+@media (max-width: 480px) {
+  .modal-body-container {
+    padding: 16px; /* Compact padding constraints for small handset targets */
+  }
+  
+  .modal-action-row {
+    flex-direction: column; /* Stack functional execution keys (Save/Delete/Cancel) vertically on narrow windows */
+    gap: 8px;
+  }
+  
+  .modal-action-row button {
+    width: 100%;
+  }
+}

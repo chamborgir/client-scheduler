@@ -1,0 +1,18 @@
+:root {
+  --bg-main: #fafafa;
+  --bg-card: #ffffff;
+  --border-default: #e5e5e5;
+  --text-main: #171717;
+  --text-muted: #404040; /* Darkened slightly for better contrast */
+  --text-light: #737373; /* Darkened slightly for better contrast */
+  --primary-accent: #171717;
+  
+  /* Layout Constraints */
+  --max-content-width: 1200px;
+  --sidebar-width: 260px;
+}
+
+/* Force a healthier baseline scale on the root layer */
+html {
+  font-size: 15px; /* Bumps up the base execution unit globally */
+}
